@@ -248,9 +248,68 @@ input[type="text"] {
 /* "~" means following sibling elements. ito yung mga element na kasunod nung naungng star.
    Ginamit para ma color din ang mga stars na kasama sa rating. */
 
-@media (max-width: 900px) {
+@media screen and (max-width: 768px) {
+    /* Stack the hero section vertically */
     .hero {
-        max-width: 90%;
-        margin: 25px;
+        padding: 20px;
+        margin: 20px 15px;
+        border-radius: 25px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+    }
+
+    .hero-text {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        order: -1; /* Move the image above the text */
+        width: 100%;
+        margin-bottom: 20px; /* Adds space between the image and the text below it */
+    }
+
+    .hero-image img {
+        height: 250px;
+        border-radius: 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    /* Adjust form padding and font sizes for smaller screens */
+    .form-submit {
+        padding: 20px 15px 50px;
+    }
+
+    .form-submit form {
+        padding: 25px 20px;
+    }
+
+    .form-submit h2 {
+        font-size: 28px;
+    }
+
+    .form-submit p {
+        font-size: 16px;
+    }
+
+    .form-submit label, 
+    .rating-label {
+        font-size: 18px;
+    }
+
+    /* Make star icons slightly smaller so they fit nicely on mobile screens */
+    .star-icon label {
+        font-size: 32px;
     }
 }
